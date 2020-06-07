@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+
+  section {
+
+    margin: 15px;
+    padding: 10px;
+
+    h2, p {
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    &#player {
+      box-shadow: -5px -5px 10px blue;
+    
+
+      h2 {
+        color: blue; 
+      }
+    }
+
+    &#computer {
+      box-shadow: 5px -5px 10px red;
+
+      h2 {
+        color: red;
+      }
+    }
+
+    img {
+      height: auto; 
+      width: 15vw;
+    }  
+    
+    .blue-select {
+      border: 2px solid blue;
+    }
+
+    .red-select {
+      border: 2px solid red;
+    }
+  }
+}
+
+#outcome {
+  text-align: center;
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  p {
+    display: inline;
+    font-size: 30px;
+
+    // Not sure why this ignores nesting
+    &:nth-child(3) {
+      color: blue;
+    }
+
+    &:nth-child(5) {
+      color: red;
+    }
+  }
+
+
+}
